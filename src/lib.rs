@@ -127,8 +127,8 @@ pub mod reasonable_implementation {
             // without requiring a `return` keyword.
             Supermarket {
                 // `vec!` is a macro which generates a Vec of a type
-                // matching the input list. Note the square bracket call pattern
-                price_rules: vec![a, b, c]
+                // matching the input list.
+                price_rules: vec!(a, b, c)
             }
         }
 
