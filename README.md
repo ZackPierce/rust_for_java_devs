@@ -40,6 +40,9 @@ First, install the Rust Nightly by following the directions at http://www.rust-l
 I suggest starting your reading in the `src/lib.rs` file, from top to bottom,
 and then move on to `tests/lib.rs`
 
+If you need a reference to the underlying approach, look in the `java` directory
+for a parallel Java implementation.
+
 If you're curious about the packaging mechanism, "cargo", look at `Cargo.toml`.
 Because this library currently has no external dependencies, there's not a lot
 to see there at the moment.
@@ -50,5 +53,11 @@ Run the tests via:
 
 ```
     cargo test
+```
+
+Or, if you want to check the java version, run:
+
+```
+   mvn clean test
 ```
 

@@ -1,19 +1,16 @@
 package reasonable_implementation;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Supermarket implements Market {
     final private List<PricingRule> priceRules;
 
     public Supermarket() {
-        priceRules = Arrays.asList(
+        priceRules = Collections.unmodifiableList(Arrays.asList(
                 new FlatPrice('A', 20),
                 new BundlePrice('B', 50, 5, 150),
                 new FlatPrice('C', 30)
-                );
+        ));
     }
 
     public int checkout(String items) throws IllegalArgumentException {
