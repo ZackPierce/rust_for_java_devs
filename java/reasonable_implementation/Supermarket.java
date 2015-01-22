@@ -19,7 +19,7 @@ public class Supermarket implements Market {
         }
         Map<Character, Integer> counts = countCharacters(items);
         int cost = 0;
-        for (PricingRule p: this.priceRules) {
+        for (PricingRule p : this.priceRules) {
             cost += p.price(counts);
         }
         return cost;
@@ -27,7 +27,7 @@ public class Supermarket implements Market {
 
     private Map<Character, Integer> countCharacters(String items) {
         HashMap<Character, Integer> count = new HashMap<Character, Integer>();
-        for(char c : items.toCharArray()) {
+        for (char c : items.toCharArray()) {
             if (count.containsKey(c)) {
                 int previous = count.get(c);
                 count.put(c, previous + 1);
