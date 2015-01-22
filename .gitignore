@@ -3,3 +3,5 @@
 *.swp
 src/*.swp
 tests/*.swp
+.idea
+*.iml

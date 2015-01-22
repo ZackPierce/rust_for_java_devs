@@ -44,7 +44,7 @@ fn ignores_unrelated_items() {
 }
 
 #[test]
-fn mixed_standard_and_unregistered_items_prices_standard_items() {
+fn mixes_standard_and_unregistered_items_prices() {
     let s = Supermarket::new();
     let items = "AXBC".to_string();
     assert_eq!(100i32, s.checkout(items))
